@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name "MAX2606")(type "KiCad")(uri "/home/pali/Documents/Radioamateur/aprs/aprs-gadget/hardware/component-libs/MAX2606/MAX2606.kicad_sym")(options "")(descr ""))
+  (lib (name "L86-M33")(type "Legacy")(uri "/home/pali/Documents/Radioamateur/aprs/aprs-gadget/hardware/component-libs/L86-M33/L86-M33.lib")(options "")(descr ""))
+)
