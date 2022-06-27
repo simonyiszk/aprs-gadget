@@ -1,14 +1,16 @@
 #include <util/delay.h>
 #include <APRS.h>
-
-extern volatile uint8_t symbol;
+#include <avr/io.h>
 
 int main(void){
 	
-	APRS_init();
+	APRS_init();	
+	DDRB |= _BV(DDB5);
 
 	while(1){
-		APRS_send_packet();		
+		PORTB |= _BV(PB5);
+		APRS_send_packet();	
+		PORTB &= ~(_BV(PB5));
 		_delay_ms(2000);
 	}
 

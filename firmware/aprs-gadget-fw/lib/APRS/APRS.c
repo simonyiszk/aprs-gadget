@@ -1,6 +1,6 @@
+#include <string.h>
 #include <APRS.h>
 #include <FSK.h>
-#include <string.h>
 
 static uint16_t CRC = 0xFFFF;
 
@@ -100,8 +100,9 @@ void APRS_send_packet(void){
     APRS_send_flag(80);
     reset_crc();
     APRS_send_header("APRS","HA3PB",1,"WIDE2",2);    
-    APRS_send_string(">helo", 5);
-    //APRS_send_string("/222917h4747.30N/01905.33Wlhelo", 31);
+    //APRS_send_string(">helo", 5);
+    //APRS_send_string("/152100h4636.89N/01850.83ElTest", 31);
+    APRS_send_string("!4636.89N/01850.83ElTest", 24);
     APRS_send_crc();
     APRS_send_flag(3);
 }

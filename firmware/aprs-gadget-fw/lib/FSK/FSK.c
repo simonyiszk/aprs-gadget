@@ -77,7 +77,6 @@ void FSK_init(void){
     sei();  //enable global inetrrupt
 }
 
-
 void FSK_start(void){
     TCCR1B |= _BV(CS00); //enable timer1 with no prescaler
 }
