@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name "L86-M33")(type "KiCad")(uri "/home/pali/Documents/Radioamateur/aprs/aprs-gadget/hardware/component-libs/L86-M33")(options "")(descr ""))
+  (lib (name "MAX2606")(type "KiCad")(uri "/home/pali/Documents/Radioamateur/aprs/aprs-gadget/hardware/component-libs/MAX2606")(options "")(descr ""))
+)
