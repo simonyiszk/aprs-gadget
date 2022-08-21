@@ -1,0 +1,17 @@
+21:34:06 **** Incremental Build of configuration Debug for project nucleo ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"/home/pali/Documents/BME/HA5KFU/aprs-gadget/firmware/stm32/nucleo/BSP/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "nucleo.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/pali/Documents/BME/HA5KFU/aprs-gadget/firmware/stm32/nucleo/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="nucleo.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: nucleo.elf
+ 
+arm-none-eabi-size   nucleo.elf 
+arm-none-eabi-objdump -h -S  nucleo.elf  > "nucleo.list"
+   text	   data	    bss	    dec	    hex	filename
+  18184	     36	   2244	  20464	   4ff0	nucleo.elf
+Finished building: default.size.stdout
+ 
+Finished building: nucleo.list
+ 
+
+21:34:06 Build Finished. 0 errors, 0 warnings. (took 322ms)
+
