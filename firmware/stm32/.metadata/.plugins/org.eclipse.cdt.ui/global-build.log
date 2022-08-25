@@ -1,7 +1,34 @@
-22:30:01 **** Incremental Build of configuration Debug for project nucleo ****
+18:07:17 **** Incremental Build of configuration Debug for project nucleo ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"/home/pali/Documents/BME/HA5KFU/aprs-gadget/firmware/stm32/nucleo/BSP/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:116:47: warning: passing argument 3 of 'HAL_TIM_PWM_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+  116 |  HAL_TIM_PWM_Start_DMA(&htim4, TIM_CHANNEL_1, sine, 18);
+      |                                               ^~~~
+      |                                               |
+      |                                               uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:403,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1943:94: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+ 1943 | HAL_StatusTypeDef HAL_TIM_PWM_Start_DMA(TIM_HandleTypeDef *htim, uint32_t Channel, uint32_t *pData, uint16_t Length);
+      |                                                                                    ~~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "nucleo.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/pali/Documents/BME/HA5KFU/aprs-gadget/firmware/stm32/nucleo/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="nucleo.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: nucleo.elf
+ 
+arm-none-eabi-size   nucleo.elf 
+arm-none-eabi-objdump -h -S  nucleo.elf  > "nucleo.list"
+   text	   data	    bss	    dec	    hex	filename
+  27900	    136	   2504	  30540	   774c	nucleo.elf
+Finished building: default.size.stdout
+ 
+Finished building: nucleo.list
+ 
+18:07:21 **** Incremental Build of configuration Debug for project nucleo ****
 make -j16 all 
 arm-none-eabi-size   nucleo.elf 
    text	   data	    bss	    dec	    hex	filename
-  22432	    136	   2336	  24904	   6148	nucleo.elf
+  27900	    136	   2504	  30540	   774c	nucleo.elf
 Finished building: default.size.stdout
  

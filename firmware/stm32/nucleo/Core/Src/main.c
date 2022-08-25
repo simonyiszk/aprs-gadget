@@ -18,6 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "dma.h"
 #include "i2c.h"
 #include "tim.h"
 #include "usart.h"
@@ -27,6 +28,7 @@
 /* USER CODE BEGIN Includes */
 #include <stdio.h>
 #include "ssd1306.h"
+#include "fsk.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -88,9 +90,11 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
   MX_USART2_UART_Init();
   MX_I2C1_Init();
   MX_TIM3_Init();
+  MX_TIM4_Init();
   /* USER CODE BEGIN 2 */
 
 	SSD1306_Init();
@@ -104,6 +108,12 @@ int main(void)
 	char counter[12];
 
 	char menu[4][7] = {"CALL","PERIOD","ICON","QUIT"};
+
+	uint16_t sine[18] = {0x00C9,0x010E,0x014B,0x0178,0x0190,0x0190,0x0178,0x014B,0x010E,0x00C9,0x0084,0x0047,0x001A,0x0002,0x0002,0x001A,0x0047,0x0084};
+
+
+	//FSK_Init();
+	HAL_TIM_PWM_Start_DMA(&htim4, TIM_CHANNEL_1, sine, 18);
 
 	HAL_TIM_Encoder_Start(&htim3, TIM_CHANNEL_ALL);
 	// __HAL_TIM_GET_COUNTER(&htim3);
@@ -127,6 +137,9 @@ int main(void)
 		SSD1306_UpdateScreen();
 
 		HAL_Delay(20);
+
+		HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
+
 	}
   /* USER CODE END 3 */
 }
