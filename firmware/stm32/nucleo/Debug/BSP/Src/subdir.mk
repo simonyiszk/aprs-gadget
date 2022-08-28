@@ -5,16 +5,19 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../BSP/Src/fifo.c \
 ../BSP/Src/fonts.c \
 ../BSP/Src/fsk.c \
 ../BSP/Src/ssd1306.c 
 
 OBJS += \
+./BSP/Src/fifo.o \
 ./BSP/Src/fonts.o \
 ./BSP/Src/fsk.o \
 ./BSP/Src/ssd1306.o 
 
 C_DEPS += \
+./BSP/Src/fifo.d \
 ./BSP/Src/fonts.d \
 ./BSP/Src/fsk.d \
 ./BSP/Src/ssd1306.d 
@@ -27,7 +30,7 @@ BSP/Src/%.o BSP/Src/%.su: ../BSP/Src/%.c BSP/Src/subdir.mk
 clean: clean-BSP-2f-Src
 
 clean-BSP-2f-Src:
-	-$(RM) ./BSP/Src/fonts.d ./BSP/Src/fonts.o ./BSP/Src/fonts.su ./BSP/Src/fsk.d ./BSP/Src/fsk.o ./BSP/Src/fsk.su ./BSP/Src/ssd1306.d ./BSP/Src/ssd1306.o ./BSP/Src/ssd1306.su
+	-$(RM) ./BSP/Src/fifo.d ./BSP/Src/fifo.o ./BSP/Src/fifo.su ./BSP/Src/fonts.d ./BSP/Src/fonts.o ./BSP/Src/fonts.su ./BSP/Src/fsk.d ./BSP/Src/fsk.o ./BSP/Src/fsk.su ./BSP/Src/ssd1306.d ./BSP/Src/ssd1306.o ./BSP/Src/ssd1306.su
 
 .PHONY: clean-BSP-2f-Src
 

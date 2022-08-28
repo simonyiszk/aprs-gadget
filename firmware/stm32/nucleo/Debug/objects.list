@@ -1,3 +1,4 @@
+"./BSP/Src/fifo.o"
 "./BSP/Src/fonts.o"
 "./BSP/Src/fsk.o"
 "./BSP/Src/ssd1306.o"

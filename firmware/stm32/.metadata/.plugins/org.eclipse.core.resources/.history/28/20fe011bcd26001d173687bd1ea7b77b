@@ -1,0 +1,13 @@
+/*
+ * bitfifo.c
+ *
+ *  Created on: Aug 28, 2022
+ *      Author: pali
+ */
+
+
+#include <fifo.h>
+
+static uint8_t FIFO_init(){
+
+}

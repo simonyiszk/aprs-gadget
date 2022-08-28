@@ -1,0 +1,13 @@
+/*
+ * bitfifo.h
+ *
+ *  Created on: Aug 28, 2022
+ *      Author: pali
+ */
+
+#ifndef INC_BITFIFO_H_
+#define INC_BITFIFO_H_
+
+
+
+#endif /* INC_BITFIFO_H_ */
