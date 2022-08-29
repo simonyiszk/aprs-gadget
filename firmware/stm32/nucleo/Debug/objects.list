@@ -1,6 +1,8 @@
+"./BSP/Src/aprs.o"
 "./BSP/Src/fifo.o"
 "./BSP/Src/fonts.o"
 "./BSP/Src/fsk.o"
+"./BSP/Src/gps.o"
 "./BSP/Src/ssd1306.o"
 "./Core/Src/dma.o"
 "./Core/Src/gpio.o"
