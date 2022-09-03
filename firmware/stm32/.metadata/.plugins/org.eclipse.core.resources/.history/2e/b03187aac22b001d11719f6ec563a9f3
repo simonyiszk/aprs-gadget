@@ -1,0 +1,14 @@
+/*
+ * gps.c
+ *
+ *  Created on: Aug 30, 2022
+ *      Author: pali
+ */
+
+#include <gps.h>
+
+void InitGPS(gps* GPS){
+	gps empty = {0};
+	*GPS = empty;
+    InitUART();
+}

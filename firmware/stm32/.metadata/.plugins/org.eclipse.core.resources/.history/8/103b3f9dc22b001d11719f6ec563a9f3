@@ -1,0 +1,35 @@
+/*
+ * gps.h
+ *
+ *  Created on: Aug 30, 2022
+ *      Author: pali
+ */
+
+#ifndef INC_GPS_H_
+#define INC_GPS_H_
+
+#include <stdint.h>
+
+typedef struct{
+    double LATITUDE;
+    double LONGITUDE;
+    double ALTITUDE;
+    double SPEED;
+
+    uint8_t VISIBLE_SATELLITES;
+    uint8_t AVAILABLE_SATELLITES;
+    uint8_t USED_SATELLITES;
+
+    uint16_t year;
+    uint8_t month, day;
+    uint8_t hour, min, sec;
+
+    char validity;
+}GPS_TypeDef;
+
+void InitGPS(gps* GPS);
+uint8_t ReceiveGPS(gps* GPS);
+
+
+
+#endif /* INC_GPS_H_ */

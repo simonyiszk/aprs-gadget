@@ -1,0 +1,24 @@
+/*
+ * nmea.h
+ *
+ *  Created on: Sep 3, 2022
+ *      Author: pali
+ */
+
+#ifndef INC_NMEA_H_
+#define INC_NMEA_H_
+
+#include <stdint.h>
+
+typedef struct{
+	uint8_t packet[1024];
+	uint8_t packet_end;
+	uint8_t transfer_in_progress;
+	uint8_t packet_available;
+}NMEA_PacketTypeDef;
+
+static const uint8_t MAX_NUMBER_OF_FIELDS;
+
+void NMEA_Receive(void);
+
+#endif /* INC_NMEA_H_ */

@@ -7,7 +7,7 @@
 
 #include <fsk.h>
 #include <fifo.h>
-#include <main.h>
+#include <tim.h>
 
 extern TIM_HandleTypeDef htim4;
 extern TIM_HandleTypeDef htim6;
