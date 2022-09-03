@@ -63,6 +63,21 @@ uint8_t ReceiveGPS(void){
     return 0;
 }
 
+void GPS_GetMaidenheadLocator(char* locator_string, uint8_t resolution){
+	const double scaling[6]={360., 360./18., 360./18./10., 360./18./10./24., 360./18./10./24./10., 360./18./10./24./10./24.};
+	if(resolution > 5){
+		resolution = 5;
+	}
+	if(GPS.validity=='1'){
+		for (uint8_t i=0;i<resolution;i++)
+		{
+		locator_string[i*2] = ((int)floor(fmod((180.0+GPS.LONGITUDE), scaling[i]) / scaling[i+1])) + ((i&1) ? '0':'A');
+		locator_string[i*2+1] = ((int)floor(fmod((90.0+GPS.LATITUDE), (scaling[i]/2)) / (scaling[i+1]/2))) + ((i&1) ? '0':'A');
+		}
+		locator_string[resolution*2]=0;
+	}
+}
+
 static void getDecimalDegree(char* gpsposition, char* hemisphere, double* output){
 
 	//converts coordinates from DDMM.MMMM format to DD.DDDDDD
