@@ -1,3 +1,6 @@
+firmware/stm32/.metadata/*
+hardware/aprs-gadget/aprs-gadget-backups/*.zip
+
 # Prerequisites
 *.d
 

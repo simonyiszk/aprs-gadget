@@ -1,6 +1,6 @@
 (sym_lib_table
-  (lib (name "MAX2606")(type "KiCad")(uri "/home/pali/Documents/Radioamateur/aprs/aprs-gadget/hardware/component-libs/MAX2606/MAX2606.kicad_sym")(options "")(descr ""))
-  (lib (name "L86-M33")(type "Legacy")(uri "/home/pali/Documents/Radioamateur/aprs/aprs-gadget/hardware/component-libs/L86-M33/L86-M33.lib")(options "")(descr ""))
-  (lib (name "STM32G030")(type "KiCad")(uri "/home/pali/Documents/Radioamateur/aprs/aprs-gadget/hardware/component-libs/STM32G030/STM32G030.kicad_sym")(options "")(descr ""))
-  (lib (name "DRA818V")(type "KiCad")(uri "/media/pali/DATA/Documents/Radioamateur/aprs/aprs-gadget/hardware/component-libs/DRA818V/DRA818V.kicad_sym")(options "")(descr ""))
+  (lib (name "STM32G030")(type "KiCad")(uri "/home/pali/Documents/BME/HA5KFU/aprs-gadget/hardware/component-libs/STM32G030/STM32G030.kicad_sym")(options "")(descr ""))
+  (lib (name "DRA818V")(type "KiCad")(uri "/home/pali/Documents/BME/HA5KFU/aprs-gadget/hardware/component-libs/DRA818V/DRA818V.kicad_sym")(options "")(descr ""))
+  (lib (name "L86-M33")(type "KiCad")(uri "/home/pali/Documents/BME/HA5KFU/aprs-gadget/hardware/component-libs/L86-M33/L86-M33.kicad_sym")(options "")(descr ""))
+  (lib (name "MicroJoyA")(type "KiCad")(uri "/home/pali/Documents/BME/HA5KFU/aprs-gadget/hardware/component-libs/MICROYOJA/MicroJoyA.kicad_sym")(options "")(descr ""))
 )

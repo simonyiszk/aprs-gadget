@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;nucleo/BSP/Inc/bitfifo.h&apos; to &apos;fifo.h&apos;" description="Rename resource &apos;bitfifo.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="BSP/Inc/bitfifo.h" name="fifo.h" stamp="1661689737406" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;nucleo/BSP/Src/bitfifo.c&apos; to &apos;fifo.c&apos;" description="Rename resource &apos;bitfifo.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="BSP/Src/bitfifo.c" name="fifo.c" stamp="1661689741995" updateReferences="true"/>
-</session>

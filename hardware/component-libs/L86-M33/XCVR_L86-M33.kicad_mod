@@ -1,5 +1,5 @@
 
-(module XCVR_L86-M33 (layer F.Cu) (tedit 6165B60E)
+(footprint XCVR_L86-M33 (layer F.Cu) (tedit 63A33CE8)
   (descr "")
   (fp_text reference REF** (at -6.83545 -12.94087 0) (layer F.SilkS)
     (effects (font (size 1.00152755906 1.00152755906) (thickness 0.15)))

@@ -320,6 +320,26 @@
     [
       "3b98ebe1-4ce1-436c-9681-81bc4c7f7451",
       ""
+    ],
+    [
+      "a0d9c951-6f2d-42fc-bc28-a1aa4c25f3bc",
+      "MCU"
+    ],
+    [
+      "97be7ac1-1c47-46c6-adca-1a6c799ee35d",
+      "UI"
+    ],
+    [
+      "c6ceb902-7efe-412c-9eeb-93cb28ce6236",
+      "AF-RF"
+    ],
+    [
+      "9b38c264-1213-4113-b94c-d53b0943f49e",
+      "SENSORS"
+    ],
+    [
+      "adc4c0fa-e8dc-4fd0-af38-b4f0047e68e4",
+      "PSU"
     ]
   ],
   "text_variables": {}
